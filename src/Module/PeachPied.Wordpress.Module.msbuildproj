@@ -1,0 +1,33 @@
+﻿<Project Sdk="Peachpie.NET.Sdk/0.9.13">
+  <Import Project="..\..\..\Common.props" />
+  <Import Project="..\..\..\Library.props" />
+  <Import Project="..\..\..\Package.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>52e53381-22bc-471b-b14b-c1e520cae0fe</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <PackageVersion>4.0.8-CI00005</PackageVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="**/*.php"
+             Exclude="obj/**;bin/**" />
+    <Content Include="**"
+             Exclude="**/*.php;obj/**;bin/**;*.msbuildproj"
+             CopyToOutputDirectory="PreserveNewest">
+      <PackagePath>contentFiles/any/netcoreapp2.0/wordpress/</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <Link>wordpress\%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Content>
+    <Content Include="wp-content/plugins/$(ModuleFolder)/$(ModuleSearchFile)" CopyToOutputDirectory="PreserveNewest">
+      <PackagePath>contentFiles/any/netcoreapp2.0/wordpress/wp-content/$(ModuleType)/$(ModuleFolder)/</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <Link>wordpress\%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- <PackageReference Include="PeachPied.WordPress" Version="$(WordPressVersion)" /> -->
+    <PackageReference Include="PeachPied.WordPress" Version="$(WordpressPackageVersion)" /><!-- Need the CI version until it becomes stable. -->
+  </ItemGroup>
+</Project>
