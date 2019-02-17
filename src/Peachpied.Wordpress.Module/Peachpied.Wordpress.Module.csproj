@@ -1,0 +1,25 @@
+﻿<Project Sdk="Peachpie.NET.Sdk/0.9.34">
+  <Import Project="..\..\Common.props" />
+  
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Peachpied Wordpress Module Template</Description>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="**/*.php" Exclude="obj/**;bin/**" />
+    <Content Include="**" Exclude="**/*.php;obj/**;bin/**;*.csproj;*.csproj.user" CopyToOutputDirectory="PreserveNewest">
+      <PackagePath>contentFiles/any/netcoreapp2.0/wordpress/</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <Link>wordpress\%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <!-- <PackageReference Include="PeachPied.WordPress" Version="$(WordPressVersion)" /> -->
+    <PackageReference Include="PeachPied.WordPress" Version="$(WordpressPackageVersion)" />
+    <!-- Need the CI version until it becomes stable. -->
+  </ItemGroup>
+</Project>

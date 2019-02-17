@@ -8,15 +8,15 @@
 
   <PropertyGroup>
     <!-- Common Version -->
-    <PeachpieVersion Condition=" '$(PeachpieVersion)' == '' ">0.9.0-*</PeachpieVersion>
-    <WordpressPackageVersion Condition=" '$(WordpressPackageVersion)' == ''">1.0.0-CI00061</WordpressPackageVersion>
+    <PeachpieVersion Condition=" '$(PeachpieVersion)' == '' ">0.9.*</PeachpieVersion>
+    <WordpressPackageVersion Condition=" '$(WordpressPackageVersion)' == ''">1.0.0-CI00071</WordpressPackageVersion>
     <!-- <WordpressVersion Condition=" '$(WordpressVersion)' == ''">4.9.6</WordpressVersion> -->
 
     <!-- Package Details -->
-    <ModuleType></ModuleType>
-    <ModuleName></ModuleName>
-    <ModuleFolder></ModuleFolder>
-    <ModuleSearchFile></ModuleSearchFile>
+    <ModuleType>Plugin</ModuleType>
+    <ModuleName>TestName</ModuleName>
+    <ModuleFolder>TestFolder</ModuleFolder>
+    <ModuleSearchFile>test.php</ModuleSearchFile>
   </PropertyGroup>
 
 </Project>

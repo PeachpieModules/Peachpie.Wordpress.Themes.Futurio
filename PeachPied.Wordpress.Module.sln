@@ -3,7 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "PeachPied.Wordpress.Plugins", "src\Module\PeachPied.Wordpress.Module.msbuildproj", "{52E53381-22BC-471B-B14B-C1E520CAE0FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Peachpied.Wordpress.Module", "src\Peachpied.Wordpress.Module\Peachpied.Wordpress.Module.csproj", "{45B3E77B-9794-4AC1-8958-FEAE0988668F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common Settings", "Common Settings", "{F6E15DCA-6D87-422B-BC50-9F62C4DE9B7F}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
+		Common.props = Common.props
+		Library.props = Library.props
+		NuGet.Config = NuGet.Config
+		Package.props = Package.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +20,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{52E53381-22BC-471B-B14B-C1E520CAE0FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52E53381-22BC-471B-B14B-C1E520CAE0FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52E53381-22BC-471B-B14B-C1E520CAE0FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52E53381-22BC-471B-B14B-C1E520CAE0FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45B3E77B-9794-4AC1-8958-FEAE0988668F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B3E77B-9794-4AC1-8958-FEAE0988668F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B3E77B-9794-4AC1-8958-FEAE0988668F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B3E77B-9794-4AC1-8958-FEAE0988668F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
