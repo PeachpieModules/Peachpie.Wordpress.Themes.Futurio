@@ -4,8 +4,10 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>Peachpied Wordpress Module Template</Description>
+    <Description>Peachpied Wordpress Theme Futurio</Description>
     <LangVersion>latest</LangVersion>
+    <AssemblyName>Peachpied.Wordpress.Themes.Futurio</AssemblyName>
+    <RootNamespace>Peachpied.Wordpress.Themes.Futurio</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
