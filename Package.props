@@ -21,7 +21,7 @@
  <!-- package -->
   <PropertyGroup>
       <RepositoryType>git</RepositoryType>
-      <RepositoryUrl>https://github.com/Valks/PeachPied.Wordpress.$(ModuleType).$(ModuleName)</RepositoryUrl>
+      <RepositoryUrl>https://github.com/PeachpieModules/PeachPie.Wordpress.$(ModuleType).$(ModuleName)</RepositoryUrl>
       <PackageOutputPath>$(MSBuildThisFileDirectory)/.nugs</PackageOutputPath>
       <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
       <VersionSuffix>prerelease</VersionSuffix><!-- we specify version suffix to make this package a pre-release version - this is mandatory since we still have a pre-release versions of dependencies -->

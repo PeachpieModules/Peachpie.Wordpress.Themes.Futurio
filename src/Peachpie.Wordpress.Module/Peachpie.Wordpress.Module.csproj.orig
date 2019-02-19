@@ -4,7 +4,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+<<<<<<< HEAD:src/Peachpied.Wordpress.Module/Peachpied.Wordpress.Module.csproj
     <Description>Peachpied Wordpress Theme Futurio</Description>
+=======
+    <Description>Peachpie Wordpress Module Template</Description>
+>>>>>>> fork-repo/master:src/Peachpie.Wordpress.Module/Peachpie.Wordpress.Module.csproj
     <LangVersion>latest</LangVersion>
     <AssemblyName>Peachpied.Wordpress.Themes.Futurio</AssemblyName>
     <RootNamespace>Peachpied.Wordpress.Themes.Futurio</RootNamespace>
