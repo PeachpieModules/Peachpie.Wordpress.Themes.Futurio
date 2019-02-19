@@ -11,8 +11,8 @@
     <VersionPrefix>1.2.8</VersionPrefix>
     <VersionSuffix></VersionSuffix>
     <VersionSuffix Condition=" '$(Configuration)' == 'Debug'">debug</VersionSuffix>
-    <VersionSuffix Condition=" '$(Build_SourceBranch)' == 'refs/heads/dev'">CI-$(Build.BuildID)</VersionSuffix>
-    <VersionSuffix Condition=" '$(Build_SourceBranch)' == 'refs/heads/master'">$(Build.SourceBranchName).$(Build.BuildID)</VersionSuffix>
+    <VersionSuffix Condition=" '$(Build_SourceBranch)' == 'refs/heads/dev'">CI-$(Build_BuildID)</VersionSuffix>
+    <VersionSuffix Condition=" '$(Build_SourceBranch)' == 'refs/heads/master'">$(Build_SourceBranchName).$(Build_BuildID)</VersionSuffix>
     <!-- This is using variables that are specific to Azure Dev Ops Pipelines -->
   </PropertyGroup>
 
