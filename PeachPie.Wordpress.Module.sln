@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Peachpied.Wordpress.Module", "src\Peachpied.Wordpress.Module\Peachpied.Wordpress.Module.csproj", "{45B3E77B-9794-4AC1-8958-FEAE0988668F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Peachpie.Wordpress.Module", "src\Peachpie.Wordpress.Module\Peachpie.Wordpress.Module.csproj", "{45B3E77B-9794-4AC1-8958-FEAE0988668F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common Settings", "Common Settings", "{F6E15DCA-6D87-422B-BC50-9F62C4DE9B7F}"
 	ProjectSection(SolutionItems) = preProject

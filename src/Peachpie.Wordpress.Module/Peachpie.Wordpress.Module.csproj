@@ -4,7 +4,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>Peachpied Wordpress Module Template</Description>
+    <Description>Peachpie Wordpress Module Template</Description>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
