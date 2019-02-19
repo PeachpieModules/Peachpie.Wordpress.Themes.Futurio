@@ -45,7 +45,7 @@
   <PropertyGroup>
       <RepositoryType>git</RepositoryType>
       <RepositoryUrl>https://github.com/PeachpieModules/PeachPie.Wordpress.$(ModuleType).$(ModuleName)</RepositoryUrl>
-      <PackageOutputPath>$(MSBuildThisFileDirectory)/.nugs</PackageOutputPath>
+      <!-- <PackageOutputPath>$(MSBuildThisFileDirectory)/.nugs</PackageOutputPath> -->
       <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
       <PublishDocumentationFile>true</PublishDocumentationFile>
   </PropertyGroup>

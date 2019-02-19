@@ -17,4 +17,5 @@
     <ModuleName>TestName</ModuleName>
   </PropertyGroup>
 
+  <Import Project="Package.props" />
 </Project>
