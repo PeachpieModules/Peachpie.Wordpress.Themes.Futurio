@@ -6,11 +6,17 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Peachpie Wordpress Module Template</Description>
     <LangVersion>latest</LangVersion>
+    <VersionPrefix></VersionPrefix>
+    <VersionSuffix></VersionSuffix>
+    <VersionSuffix Condition=" '$(Configuration)' == 'Debug'">debug</VersionSuffix>
+    <VersionSuffix Condition=" '$(Build_SourceBranch)' == 'refs/heads/dev'">CI-$(Build_BuildID)</VersionSuffix>
+    <VersionSuffix Condition=" '$(Build_SourceBranch)' == 'refs/heads/master'">$(Build_SourceBranchName).$(Build_BuildID)</VersionSuffix>
+    <!-- This is using variables that are specific to Azure Dev Ops Pipelines -->
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="**/*.php" Exclude="obj/**;bin/**" />
-    <Content Include="**" Exclude="**/*.php;obj/**;bin/**;*.csproj;*.csproj.user" CopyToOutputDirectory="PreserveNewest">
+    <Compile Include="**/*.php" Exclude="obj/**;bin/**;**/tests/**;**/test/**;**/cli/**;**/composer-php52/**" />
+    <Content Include="**" Exclude="obj/**;bin/**;*.csproj;*.csproj.user" CopyToOutputDirectory="PreserveNewest">
       <PackagePath>contentFiles/any/netcoreapp2.0/wordpress/</PackagePath>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <Link>wordpress\%(RecursiveDir)%(Filename)%(Extension)</Link>

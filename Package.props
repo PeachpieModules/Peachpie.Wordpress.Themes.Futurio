@@ -18,13 +18,35 @@
     <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
 </PropertyGroup>
 
- <!-- package -->
+  <!-- Source Link -->
+  <PropertyGroup>
+    <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    
+    <!-- Optional: Embed source files that are not tracked by the source control manager in the PDB -->
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+  
+    <!-- Optional: Build symbol package (.snupkg) to distribute the PDB containing Source Link -->
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Github -->
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-18618-05" PrivateAssets="All"/>
+    <!-- Azure DevOps -->
+    <!-- <PackageReference Include="Microsoft.SourceLink.Vsts.Git" Version="1.0.0-beta2-18618-05" PrivateAssets="All"/> -->
+    <!-- GitLab -->
+    <!-- <PackageReference Include="Microsoft.SourceLink.GitLab" Version="1.0.0-beta2-18618-05" PrivateAssets="All"/> -->
+    <!-- Bitbucket.org -->
+    <!-- <PackageReference Include="Microsoft.SourceLink.Bitbucket.Git" Version="1.0.0-beta2-18618-05" PrivateAssets="All"/> -->
+  </ItemGroup>
+
+  <!-- package -->
   <PropertyGroup>
       <RepositoryType>git</RepositoryType>
       <RepositoryUrl>https://github.com/PeachpieModules/PeachPie.Wordpress.$(ModuleType).$(ModuleName)</RepositoryUrl>
       <PackageOutputPath>$(MSBuildThisFileDirectory)/.nugs</PackageOutputPath>
       <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-      <VersionSuffix>prerelease</VersionSuffix><!-- we specify version suffix to make this package a pre-release version - this is mandatory since we still have a pre-release versions of dependencies -->
       <PublishDocumentationFile>true</PublishDocumentationFile>
   </PropertyGroup>
 </Project>

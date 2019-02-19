@@ -15,8 +15,6 @@
     <!-- Package Details -->
     <ModuleType>Plugin</ModuleType>
     <ModuleName>TestName</ModuleName>
-    <ModuleFolder>TestFolder</ModuleFolder>
-    <ModuleSearchFile>test.php</ModuleSearchFile>
   </PropertyGroup>
 
 </Project>
