@@ -6,8 +6,8 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Peachpie Wordpress Theme Futurio</Description>
     <LangVersion>latest</LangVersion>
-    <AssemblyName>Peachpied.Wordpress.Themes.Futurio</AssemblyName>
-    <RootNamespace>Peachpied.Wordpress.Themes.Futurio</RootNamespace>
+    <AssemblyName>Peachpie.Wordpress.Themes.Futurio</AssemblyName>
+    <RootNamespace>Peachpie.Wordpress.Themes.Futurio</RootNamespace>
     <VersionPrefix>1.2.8</VersionPrefix>
     <VersionSuffix></VersionSuffix>
     <VersionSuffix Condition=" '$(Configuration)' == 'Debug'">debug</VersionSuffix>
