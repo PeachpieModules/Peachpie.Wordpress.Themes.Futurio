@@ -1,0 +1,1 @@
+[![Build Status](https://dev.azure.com/Valks-Peachpie/Peachpie.Wordpress.Template/_apis/build/status/PeachpieModules.Peachpie.Wordpress.Module.Template?branchName=master)](https://dev.azure.com/Valks-Peachpie/Peachpie.Wordpress.Template/_build/latest?definitionId=9&branchName=master)
