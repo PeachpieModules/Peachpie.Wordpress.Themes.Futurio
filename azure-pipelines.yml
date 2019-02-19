@@ -9,6 +9,8 @@ pool:
 variables:
   BuildConfiguration: 'Release'
 
+steps:
+
 - task: DotNetCoreCLI@2
   displayName: 'Build Wordpress Plugin'
   inputs:
