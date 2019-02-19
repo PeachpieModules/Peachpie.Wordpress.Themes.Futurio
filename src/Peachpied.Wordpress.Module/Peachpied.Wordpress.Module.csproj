@@ -1,4 +1,4 @@
-﻿<Project Sdk="Peachpie.NET.Sdk/0.9.34">
+﻿<Project Sdk="Peachpie.NET.Sdk/0.9.35">
   <Import Project="..\..\Common.props" />
   
   <PropertyGroup>
