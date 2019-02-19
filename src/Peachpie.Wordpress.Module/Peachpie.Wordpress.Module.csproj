@@ -11,7 +11,8 @@
     <VersionPrefix>1.2.8</VersionPrefix>
     <VersionSuffix></VersionSuffix>
     <VersionSuffix Condition=" '$(Configuration)' == 'Debug'">debug</VersionSuffix>
-    <VersionSuffix Condition=" '$(Build_SourceBranch)' == 'refs/heads/develop'">pre.$(Build_BuildID)</VersionSuffix>
+    <VersionSuffix Condition=" '$(Build_SourceBranch)' == 'refs/heads/dev'">CI-$(Build.BuildID)</VersionSuffix>
+    <VersionSuffix Condition=" '$(Build_SourceBranch)' == 'refs/heads/master'">$(Build.SourceBranchName).$(Build.BuildID)</VersionSuffix>
     <!-- This is using variables that are specific to Azure Dev Ops Pipelines -->
   </PropertyGroup>
 
@@ -19,6 +20,11 @@
     <Compile Include="**/*.php" Exclude="obj/**;bin/**" />
     <Content Include="**" Exclude="**/*.php;obj/**;bin/**;*.csproj;*.csproj.user" CopyToOutputDirectory="PreserveNewest">
       <PackagePath>contentFiles/any/netcoreapp2.0/wordpress/</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <Link>wordpress\%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Content>
+    <Content Include="wp-content/$(ModuleType)/$(ModuleFolder)/$(ModuleSearchFile)" CopyToOutputDirectory="PreserveNewest">
+      <PackagePath>contentFiles/any/netcoreapp2.0/wordpress/wp-content/$(ModuleType)/$(ModuleFolder)/</PackagePath>
       <PackageCopyToOutput>true</PackageCopyToOutput>
       <Link>wordpress\%(RecursiveDir)%(Filename)%(Extension)</Link>
     </Content>
