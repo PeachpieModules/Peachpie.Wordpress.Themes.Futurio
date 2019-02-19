@@ -22,6 +22,7 @@ steps:
     feedsToUse: config
     nugetConfigPath: NuGet.config    # Relative to root of the repository
     #externalFeedCredentials: <Name of the NuGet service connection>
+    configuration: '$(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
   displayName: 'Pack Wordpress Theme'
@@ -29,6 +30,7 @@ steps:
     command: pack
     projects: '**/*.csproj'
     nobuild: true
+    configuration: '$(BuildConfiguration)'
 
 # Publish Build Artifacts
 # Publish build artifacts to Azure Artifacts/TFS or a file share
