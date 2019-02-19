@@ -13,10 +13,9 @@
     <!-- <WordpressVersion Condition=" '$(WordpressVersion)' == ''">4.9.6</WordpressVersion> -->
 
     <!-- Package Details -->
-    <ModuleType>themes</ModuleType>
+    <ModuleType>Theme</ModuleType>
     <ModuleName>Futurio</ModuleName>
-    <ModuleFolder>futurio</ModuleFolder>
-    <ModuleSearchFile>index.php</ModuleSearchFile>
   </PropertyGroup>
 
+  <Import Project="Package.props" />
 </Project>
