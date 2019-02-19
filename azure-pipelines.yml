@@ -6,6 +6,9 @@
 pool:
   vmImage: 'Ubuntu 16.04'
 
+trigger:
+  - master
+  
 variables:
   BuildConfiguration: 'Release'
 
@@ -20,15 +23,9 @@ steps:
     nugetConfigPath: NuGet.config    # Relative to root of the repository
     #externalFeedCredentials: <Name of the NuGet service connection>
 
-# Build Artifacts
-- task: DotNetCoreCLI@2
-  displayName: 'Build Artifacts'
-  inputs:
-    command: publish
-    projects: '**/*.csproj'
-    publishWebProjects: False
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    zipAfterPublish: True
+- script: dotnet pack --configuration $(buildConfiguration) --no-build --output %Build_ArtifactStagingDirectory%
+  condition: and(succeeded(), or(eq(variables['Build.SourceBranchName'], 'master'),eq(variables['Build.SourceBranchName'], 'dev')))
+  displayName: Pack Plugin
 
 # Publish Build Artifacts
 # Publish build artifacts to Azure Artifacts/TFS or a file share

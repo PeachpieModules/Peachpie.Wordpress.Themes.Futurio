@@ -8,6 +8,11 @@
     <LangVersion>latest</LangVersion>
     <AssemblyName>Peachpied.Wordpress.Themes.Futurio</AssemblyName>
     <RootNamespace>Peachpied.Wordpress.Themes.Futurio</RootNamespace>
+    <VersionPrefix>1.2.8</VersionPrefix>
+    <VersionSuffix></VersionSuffix>
+    <VersionSuffix Condition=" '$(Configuration)' == 'Debug'">debug</VersionSuffix>
+    <VersionSuffix Condition=" '$(Build_SourceBranch)' == 'refs/heads/develop'">pre.$(Build_BuildID)</VersionSuffix>
+    <!-- This is using variables that are specific to Azure Dev Ops Pipelines -->
   </PropertyGroup>
 
   <ItemGroup>

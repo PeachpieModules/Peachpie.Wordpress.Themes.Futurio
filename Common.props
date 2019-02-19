@@ -13,10 +13,10 @@
     <!-- <WordpressVersion Condition=" '$(WordpressVersion)' == ''">4.9.6</WordpressVersion> -->
 
     <!-- Package Details -->
-    <ModuleType>Plugin</ModuleType>
-    <ModuleName>TestName</ModuleName>
-    <ModuleFolder>TestFolder</ModuleFolder>
-    <ModuleSearchFile>test.php</ModuleSearchFile>
+    <ModuleType>Theme</ModuleType>
+    <ModuleName>Futurio</ModuleName>
+    <ModuleFolder>futurio</ModuleFolder>
+    <ModuleSearchFile>functions.php</ModuleSearchFile>
   </PropertyGroup>
 
 </Project>
