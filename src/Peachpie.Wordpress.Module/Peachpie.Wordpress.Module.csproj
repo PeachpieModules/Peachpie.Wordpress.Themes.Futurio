@@ -7,6 +7,14 @@
     <Description>Peachpie Wordpress Module Template</Description>
     <LangVersion>latest</LangVersion>
     <VersionPrefix></VersionPrefix>
+
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Peachpie Wordpress Module Template</Description>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>Peachpie.Wordpress.Module.Template</AssemblyName>
+    <RootNamespace>Peachpie.Wordpress.Module.Template</RootNamespace>
+    <VersionPrefix>1.0.0</VersionPrefix>
     <VersionSuffix></VersionSuffix>
     <VersionSuffix Condition=" '$(Configuration)' == 'Debug'">debug</VersionSuffix>
     <VersionSuffix Condition=" '$(Build_SourceBranch)' == 'refs/heads/dev'">CI-$(Build_BuildID)</VersionSuffix>

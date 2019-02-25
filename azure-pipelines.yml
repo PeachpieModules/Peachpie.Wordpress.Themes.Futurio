@@ -6,29 +6,30 @@
 pool:
   vmImage: 'Ubuntu 16.04'
 
+trigger:
+  - master
+  
 variables:
   BuildConfiguration: 'Release'
 
 steps:
 
 - task: DotNetCoreCLI@2
-  displayName: 'Build Wordpress Plugin'
+  displayName: 'Build Wordpress Theme'
   inputs:
     command: build
     projects: '**/*.csproj'
     feedsToUse: config
     nugetConfigPath: NuGet.config    # Relative to root of the repository
     #externalFeedCredentials: <Name of the NuGet service connection>
+    arguments: '--configuration $(BuildConfiguration)'
 
-# Build Artifacts
 - task: DotNetCoreCLI@2
-  displayName: 'Build Artifacts'
+  displayName: 'Pack Wordpress Theme'
   inputs:
-    command: publish
+    command: pack
     projects: '**/*.csproj'
-    publishWebProjects: False
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    zipAfterPublish: True
+    nobuild: true
 
 # Publish Build Artifacts
 # Publish build artifacts to Azure Artifacts/TFS or a file share
