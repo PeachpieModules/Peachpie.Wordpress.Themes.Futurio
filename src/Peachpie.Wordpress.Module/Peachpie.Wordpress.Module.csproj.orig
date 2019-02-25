@@ -1,0 +1,39 @@
+﻿<Project Sdk="Peachpie.NET.Sdk/0.9.35">
+  <Import Project="..\..\Common.props" />
+  
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Peachpie Wordpress Theme Futurio</Description>
+    <LangVersion>latest</LangVersion>
+<<<<<<< HEAD
+    <AssemblyName>Peachpie.Wordpress.Themes.Futurio</AssemblyName>
+    <RootNamespace>Peachpie.Wordpress.Themes.Futurio</RootNamespace>
+    <VersionPrefix>1.2.8</VersionPrefix>
+=======
+    <AssemblyName>Peachpie.Wordpress.Module.Template</AssemblyName>
+    <RootNamespace>Peachpie.Wordpress.Module.Template</RootNamespace>
+    <VersionPrefix>1.0.0</VersionPrefix>
+>>>>>>> fork-repo/master
+    <VersionSuffix></VersionSuffix>
+    <VersionSuffix Condition=" '$(Configuration)' == 'Debug'">debug</VersionSuffix>
+    <VersionSuffix Condition=" '$(Build_SourceBranch)' == 'refs/heads/dev'">CI-$(Build_BuildID)</VersionSuffix>
+    <VersionSuffix Condition=" '$(Build_SourceBranch)' == 'refs/heads/master'">$(Build_SourceBranchName).$(Build_BuildID)</VersionSuffix>
+    <!-- This is using variables that are specific to Azure Dev Ops Pipelines -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="**/*.php" Exclude="obj/**;bin/**;**/tests/**;**/test/**;**/cli/**;**/composer-php52/**" />
+    <Content Include="**" Exclude="obj/**;bin/**;*.csproj;*.csproj.user" CopyToOutputDirectory="PreserveNewest">
+      <PackagePath>contentFiles/any/netcoreapp2.0/wordpress/</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <Link>wordpress\%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <!-- <PackageReference Include="PeachPied.WordPress" Version="$(WordPressVersion)" /> -->
+    <PackageReference Include="PeachPied.WordPress" Version="$(WordpressPackageVersion)" />
+    <!-- Need the CI version until it becomes stable. -->
+  </ItemGroup>
+</Project>
